@@ -52,7 +52,7 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPost("makeAdmin")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "IsAdmin")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "IsAdmin")]
         public async Task<ActionResult> MakeAdmin([FromBody] string userId)
         {
             var user = await userManager.FindByIdAsync(userId);
